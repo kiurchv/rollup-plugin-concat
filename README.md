@@ -4,8 +4,8 @@ This [Rollup](http://rollupjs.org) plugin allows you to concatenate javascript f
 ## use cases
 You can use this to concatenate a bunch of files together without having to make them into modules.  This is useful when you're dealing with many small inter-dependent modules where using ES6 import syntax becomes a chore.  E.g., in the case of an Angular 1.5 app, you can simply use `concat_tree` on the folders holding your Directives, Views, Services, and Factories.  Below are some example usages:
 
-- [zEdit/app.js](/zedit/blob/master/src/javascripts/app.js)
-- [zEdit/xelib.js](/zedit/blob/master/src/javascripts/xelib.js)
+- [zEdit/app.js](https://github.com/matortheeternal/zedit/blob/master/src/javascripts/app.js)
+- [zEdit/xelib.js](https://github.com/matortheeternal/zedit/blob/master/src/javascripts/xelib.js)
 
 ## install
 This package has not been added to npm yet.
