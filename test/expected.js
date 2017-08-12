@@ -12,7 +12,8 @@ var x = 1;
 console.log('source2.js');
 x = 2;
 
-//= concat ./tree2/source4.js
+console.log('source4.js');
+
 
 console.log('source3.js');
 

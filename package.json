@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "fs-jetpack": "^1.2.0",
+    "magic-string": "^0.22.4",
     "rollup": "^0.34.13"
   }
 }
