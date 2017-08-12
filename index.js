@@ -1,14 +1,15 @@
 var jetpack = require('fs-jetpack');
 var path = require('path');
+var os = require('os');
 
-var ensureTrailingNewline = function(code) {
-  if (code.slice(-1) !== '\n') code += '\n';
+var ensureTrailingNewLine = function(code) {
+  if (!code.endsWith(os.EOL)) code += os.EOL;
   return code;
 };
 
 var load = function(path) {
     if (!jetpack.exists(path)) console.log('ERROR: File not found at "' + path + '"');
-    return ensureTrailingNewline(jetpack.read(path));
+    return ensureTrailingNewLine(jetpack.read(path));
 };
 
 var loadTree = function(path) {
