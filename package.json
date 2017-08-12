@@ -1,0 +1,29 @@
+{
+  "name": "rollup-plugin-concat",
+  "version": "0.0.1",
+  "description": "Concatenates javascript files sprockets-like ",
+  "author": "Mator <mator.eternal@gmail.com> (http://matortheeternal.github.io/)",
+  "license": "MIT",
+  "main": "index.js",
+  "homepage": "https://github.com/matortheeternal/rollup-plugin-concat",
+  "bugs": {
+    "url": "https://github.com/matortheeternal/rollup-plugin-concat/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/matortheeternal/rollup-plugin-concat.git"
+  },
+  "scripts": {},
+  "keywords": [
+    "rollup-plugin",
+    "concat",
+    "sprockets",
+    "concatenation"
+  ],
+  "dependencies": {
+    "rollup-pluginutils": "^1.5.1"
+  },
+  "devDependencies": {
+    "rollup": "^0.34.1"
+  }
+}
