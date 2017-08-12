@@ -1,14 +1,19 @@
 var jetpack = require('fs-jetpack');
 var path = require('path');
 
+var ensureTrailingNewline = function(code) {
+  if (code.slice(-1) !== '\n') code += '\n';
+  return code;
+};
+
 var load = function(path) {
     if (!jetpack.exists(path)) console.log('ERROR: File not found at "' + path + '"');
-    return jetpack.read(path);
+    return ensureTrailingNewline(jetpack.read(path));
 };
 
 var loadTree = function(path) {
     return jetpack.find(path, { matching: '*.js' }).reduce(function(code, filePath) {
-        return code  + (code != '' && '\n\n' || '') + load(filePath);
+        return code + load(filePath);
     }, '');
 };
 
@@ -24,7 +29,7 @@ module.exports = function(options) {
                     console.log('rollup-plugin-concat: processing "' + match + '" in "' + id + '"');
                 }
                 let targetPath = path.join(dir, target);
-                return (tree ? loadTree(targetPath) : load(targetPath)) + '\n';
+                return (tree ? loadTree(targetPath) : load(targetPath));
             });
             return {
                 code: result,
