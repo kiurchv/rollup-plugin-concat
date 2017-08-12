@@ -13,7 +13,9 @@
     "type": "git",
     "url": "http://github.com/matortheeternal/rollup-plugin-concat.git"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "DIFF=$(rollup -c test/rollup.config.js test/source.js | diff test/expected.js -); if [ -z \"$DIFF\" ]; then echo \"$DIFF\"; exit 1; fi;"
+  },
   "keywords": [
     "rollup-plugin",
     "concat",
@@ -24,6 +26,7 @@
     "rollup-pluginutils": "^1.5.1"
   },
   "devDependencies": {
-    "rollup": "^0.34.1"
+    "fs-jetpack": "^1.2.0",
+    "rollup": "^0.34.13"
   }
 }
