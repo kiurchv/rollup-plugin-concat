@@ -49,7 +49,7 @@ module.exports = function(opts) {
             if (changes) {
               return {
                   code: magicStr.toString(),
-                  map: options.sourceMap ? magicStr.generateMap({ hires: true }) : null
+                  map: magicStr.generateMap({ hires: true })
               };
             }
             
