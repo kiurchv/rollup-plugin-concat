@@ -1,0 +1,1 @@
+console.log('source6.js');
