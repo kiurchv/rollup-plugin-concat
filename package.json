@@ -23,11 +23,11 @@
     "concatenation"
   ],
   "dependencies": {
+    "fs-jetpack": "^1.2.0",
+    "magic-string": "^0.22.4",
     "rollup-pluginutils": "^1.5.1"
   },
   "devDependencies": {
-    "fs-jetpack": "^1.2.0",
-    "magic-string": "^0.22.4",
     "rollup": "^0.34.13"
   }
 }
